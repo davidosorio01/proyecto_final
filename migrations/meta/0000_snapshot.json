@@ -1,0 +1,245 @@
+{
+  "id": "00000000-0000-0000-0000-000000000000",
+  "prevId": "",
+  "version": "6",
+  "dialect": "sqlite",
+  "tables": {
+    "player": {
+      "name": "player",
+      "columns": {
+        "id": {
+          "autoincrement": false,
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "nombre": {
+          "autoincrement": false,
+          "name": "nombre",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {}
+    },
+    "equipos": {
+      "name": "equipos",
+      "columns": {
+        "id": {
+          "autoincrement": false,
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": false
+        },
+        "nombre": {
+          "autoincrement": false,
+          "name": "nombre",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "grado": {
+          "autoincrement": false,
+          "name": "grado",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {}
+    },
+    "torneos": {
+      "name": "torneos",
+      "columns": {
+        "id": {
+          "autoincrement": false,
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": false
+        },
+        "inicio_torneo": {
+          "autoincrement": false,
+          "name": "inicio_torneo",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "final_torneo": {
+          "autoincrement": false,
+          "name": "final_torneo",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nombre": {
+          "autoincrement": false,
+          "name": "nombre",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {}
+    },
+    "equipos_torneo": {
+      "name": "equipos_torneo",
+      "columns": {
+        "torneo_id": {
+          "autoincrement": false,
+          "name": "torneo_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "equipo_1": {
+          "autoincrement": false,
+          "name": "equipo_1",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "equipo_2": {
+          "autoincrement": false,
+          "name": "equipo_2",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "marcador_1": {
+          "autoincrement": false,
+          "name": "marcador_1",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "marcador_2": {
+          "autoincrement": false,
+          "name": "marcador_2",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fecha_partido": {
+          "autoincrement": false,
+          "name": "fecha_partido",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {
+        "equipos_torneo_equipo_2_equipos_id_fk": {
+          "name": "equipos_torneo_equipo_2_equipos_id_fk",
+          "tableFrom": "equipos_torneo",
+          "tableTo": "equipos",
+          "columnsFrom": [
+            "equipo_2"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "equipos_torneo_equipo_1_equipos_id_fk": {
+          "name": "equipos_torneo_equipo_1_equipos_id_fk",
+          "tableFrom": "equipos_torneo",
+          "tableTo": "equipos",
+          "columnsFrom": [
+            "equipo_1"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "equipos_torneo_torneo_id_torneos_id_fk": {
+          "name": "equipos_torneo_torneo_id_torneos_id_fk",
+          "tableFrom": "equipos_torneo",
+          "tableTo": "torneos",
+          "columnsFrom": [
+            "torneo_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "uniqueConstraints": {}
+    },
+    "partidos": {
+      "name": "partidos",
+      "columns": {
+        "id_player": {
+          "autoincrement": false,
+          "name": "id_player",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id_equipos": {
+          "autoincrement": false,
+          "name": "id_equipos",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {
+        "partidos_id_equipos_equipos_id_fk": {
+          "name": "partidos_id_equipos_equipos_id_fk",
+          "tableFrom": "partidos",
+          "tableTo": "equipos",
+          "columnsFrom": [
+            "id_equipos"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "partidos_id_player_player_id_fk": {
+          "name": "partidos_id_player_player_id_fk",
+          "tableFrom": "partidos",
+          "tableTo": "player",
+          "columnsFrom": [
+            "id_player"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  }
+}
