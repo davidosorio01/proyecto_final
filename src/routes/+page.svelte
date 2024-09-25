@@ -1,17 +1,9 @@
 <script>
-    const container = document.querySelector(".container");//Creacion de constante. Esta línea de código selecciona el primer elemento del documento HTML que tiene la clase "container" y lo almacena en la constante container, lo que permite acceder y manipular ese elemento en el código JavaScript.
-const btnSignIn = document.getElementById("btn-sign-in");//
-const btnSignUp = document.getElementById("btn-sign-up");//
-
-btnSignIn.addEventListener("click",()=>{// este código escucha el clic en el botón "btnSignIn" y al hacer clic, quita la clase "toggle" del elemento con la clase "container", posiblemente cambiando su apariencia o comportamiento en la interfaz de usuario.
-   container.classList.remove("toggle");
-});
-btnSignUp.addEventListener("click",()=>{//
-   container.classList.add("toggle");//
-});
+    let btnSignUp 
+    let signIn = false
 </script>
 
-<div class="container">
+<div class="container" class:toggle={signIn}>
     <div class="container-form">
         <form class="sign-in" action="Menu1.html">
             <h2>Iniciar Sesión</h2>
@@ -34,11 +26,11 @@ btnSignUp.addEventListener("click",()=>{//
                     <input type="password" placeholder="Password" required>
                 </div>
                 <a href="l">¿Olvidaste tu contraseña?</a>
-            <button class="button">INICIAR SESIÓN</button>
+            <button  class="button">INICIAR SESIÓN</button>
         </form>
     </div>
 
-    <div class="container-form">
+    <div class="container-form" class:toggle={signIn} >
         <form class="sign-up">
             <h2>¿No tienes una cuenta?¡Registrate!</h2>
                 <div class="social-networks">
@@ -79,25 +71,18 @@ btnSignUp.addEventListener("click",()=>{//
         <div class="welcome-sign-up welcome">
             <h3>¡Bienvenido!</h3>
             <p>Ingrese sus datos personales para continuar y poder disfrutar de nuestros servicios</p>
-            <button class="button" id="btn-sign-up">Registrarse</button>
+            <button onclick={()=> signIn = !signIn} bind:this={btnSignUp} class="button" id="btn-sign-up">Registrarse</button>
         </div>
         <div class="welcome-sign-in welcome">
             <h3>¡Hola!</h3>
             <p>Regístrate con tus datos personales para utilizar todos los beneficiso de nuestro sitio</p>
-            <button class="button" id="btn-sign-in" >Iniciar Sesión</button>
+            <button onclick={()=> signIn = !signIn} bind:this={btnSignUp} class="button" id="btn-sign-in" >Iniciar Sesion</button>
         </div>
     </div>
 </div>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
-}
-
+    
 .container{
     width: 100%;
     height: 100%;

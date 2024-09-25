@@ -1,28 +1,53 @@
-<script>
-	// Espera a que el DOM esté cargado
-document.addEventListener("DOMContentLoaded", function () {
-    // Obtén todos los elementos de radio del slider
-    var radioButtons = document.querySelectorAll('input[name="slider"]');
-
-    // Establece un índice inicial para la diapositiva actual
-    var currentSlide = 0;
-
-    // Función para cambiar a la siguiente diapositiva
-    function nextSlide() {
-      // Desmarca la diapositiva actual
-      radioButtons[currentSlide].checked = false;
-
-      // Incrementa el índice de la diapositiva actual
-      currentSlide = (currentSlide + 1) % radioButtons.length;
-
-      // Marca la nueva diapositiva
-      radioButtons[currentSlide].checked = true;
-    }
-
-    // Establece un intervalo para cambiar automáticamente las diapositivas cada 2 segundos
-    setInterval(nextSlide, 2000);
+<script lang="ts">
+	$effect(()=>{
+		let currentSlide = 0; // Cambié $state por una variable normal ya que no es necesario usar $state aquí
+	})
+	
+	const slides = [
+	  { id: 's1', src: 'https://s.cafebazaar.ir/images/icons/com.muratos.learn_animals_english-75f51e2a-c295-439e-ba84-150cccc0a631_512x512.png?x-img=v1/resize,h_256,w_256,lossless_false/optimize', alt: 'Tifo BvB' },
+	  { id: 's2', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS1CXZSBHtOkRlQ3bqInOBq1uWkC2Hkg2r1jPnWNdxJVWxogK-uHfm8lYtSXWG21ssorY&usqp=CAU', alt: 'Tifo Liverpool' },
+	  { id: 's3', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF-rGM6v1OaKcmYiVxSo041p8F7kCLQoPVxIiy8GIGF2uRh6Fsbtui4lhz2MOB8PTgzo0&usqp=CAU', alt: 'Tifo Real Madrid' },
+	  { id: 's4', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG1cM3o_568GFtcC8wDT3xVQwNkKzsl9Goz3Sy_Ejav91UbNVCWVUqTa0WtDXsMb3C5ug&usqp=CAU', alt: 'Tifo Barcelona' },
+	  { id: 's5', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCgSaVP7h3hSN6rBp7N8uCy0g8gB9p50lJQE6iDZmbleXBBd-z64jZ3__Z9hZ95cativA&usqp=CAU', alt: 'Tifo PSG' },
+	  { id: 's6', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5Jt_ZOtn3aF_x_Y5YspWKdrPCqqkkIAMmWAiADpG-Wd8XzJ51r3sK53_5Q9C6D6pGgLg&usqp=CAU', alt: 'Tifo Juventus' }
+	];
+  
+	function nextSlide() {
+	  currentSlide = (currentSlide + 1) % slides.length;
+	}
+  
+	function prevSlide() {
+	  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+	}
+  
+  $effect(() => {
+  // This will be recreated whenever `milliseconds` changes
+  const interval = setInterval(nextSlide, 200);
+  
+  return () => {
+  // if a callback is provided, it will run
+  // a) immediately before the effect re-runs
+  // b) when the component is destroyed
+  clearInterval(interval);
+  };
   });
+	// Configuración de intervalo para avanzar automáticamente cada 3 segundos
 </script>
+
+<div id="carousel">
+  <!-- Botón para ir a la imagen anterior -->
+  <button class="prev" onclick={prevSlide}>‹</button>
+ 
+  <!-- Imágenes del carrusel -->
+  {#each slides as slide, index}
+    <div class="slide {index === currentSlide ? 'active' : ''}">
+      <img src={slide.src} alt={slide.alt} />
+    </div>
+  {/each}
+
+  <!-- Botón para ir a la siguiente imagen -->
+  <button class="next" onclick={nextSlide}>›</button>
+</div>
 
 <header>
 	<div class="container">
@@ -153,7 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 				<div class="container__card-service container__box-cardPrimary">
 					<div class="card__service box__card-primary">
-						<img src="../LogoAs.png" />
 						<h2>Diario AS</h2>
 						<a href="https://colombia.as.com/"
 							><p>
@@ -260,10 +284,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		<div class="box__footer">
 			<!--Contenedor de acerca de nuestras funciones como compañia-->
 			<h2>Compañia</h2>
-			<a href="#">Acerca de</a>
-			<a href="#">Trabajos</a>
-			<a href="#">Procesos</a>
-			<a href="#">Servicios</a>
+			<a href="l">Acerca de</a>
+			<a href="l">Trabajos</a>
+			<a href="l">Procesos</a>
+			<a href="l">Servicios</a>
 		</div>
 
 		<div class="box__footer">
@@ -280,3 +304,57 @@ document.addEventListener("DOMContentLoaded", function () {
 		<p>Todos los derechos reservados © 2024 <b>Sport Scores</b></p>
 	</div>
 </footer>
+
+<!-- Estilos -->
+<style>
+	#carousel {
+	  position: relative;
+	  width: 100%;
+	  max-width: 600px;
+	  margin: auto;
+	  overflow: hidden;
+	}
+  
+	.slide {
+	  display: none;
+	  position: absolute;
+	  width: 100%;
+	  transition: opacity 0.5s ease-in-out;
+	}
+  
+	.slide.active {
+	  display: block;
+	}
+  
+	img {
+	  width: 100%;
+	  height: auto;
+	}
+  
+	/* Botones de navegación */
+	button {
+	  position: absolute;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  background-color: rgba(0, 0, 0, 0.5);
+	  border: none;
+	  color: white;
+	  font-size: 2rem;
+	  padding: 0.5rem;
+	  cursor: pointer;
+	  z-index: 10;
+	}
+  
+	.prev {
+	  left: 10px;
+	}
+  
+	.next {
+	  right: 10px;
+	}
+  
+	button:hover {
+	  background-color: rgba(0, 0, 0, 0.8);
+	}
+  </style>
+  
