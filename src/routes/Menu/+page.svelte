@@ -1,53 +1,24 @@
-<script lang="ts">
-	$effect(()=>{
-		let currentSlide = 0; // Cambié $state por una variable normal ya que no es necesario usar $state aquí
-	})
-	
-	const slides = [
-	  { id: 's1', src: 'https://s.cafebazaar.ir/images/icons/com.muratos.learn_animals_english-75f51e2a-c295-439e-ba84-150cccc0a631_512x512.png?x-img=v1/resize,h_256,w_256,lossless_false/optimize', alt: 'Tifo BvB' },
-	  { id: 's2', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS1CXZSBHtOkRlQ3bqInOBq1uWkC2Hkg2r1jPnWNdxJVWxogK-uHfm8lYtSXWG21ssorY&usqp=CAU', alt: 'Tifo Liverpool' },
-	  { id: 's3', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF-rGM6v1OaKcmYiVxSo041p8F7kCLQoPVxIiy8GIGF2uRh6Fsbtui4lhz2MOB8PTgzo0&usqp=CAU', alt: 'Tifo Real Madrid' },
-	  { id: 's4', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG1cM3o_568GFtcC8wDT3xVQwNkKzsl9Goz3Sy_Ejav91UbNVCWVUqTa0WtDXsMb3C5ug&usqp=CAU', alt: 'Tifo Barcelona' },
-	  { id: 's5', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCgSaVP7h3hSN6rBp7N8uCy0g8gB9p50lJQE6iDZmbleXBBd-z64jZ3__Z9hZ95cativA&usqp=CAU', alt: 'Tifo PSG' },
-	  { id: 's6', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5Jt_ZOtn3aF_x_Y5YspWKdrPCqqkkIAMmWAiADpG-Wd8XzJ51r3sK53_5Q9C6D6pGgLg&usqp=CAU', alt: 'Tifo Juventus' }
-	];
-  
-	function nextSlide() {
-	  currentSlide = (currentSlide + 1) % slides.length;
-	}
-  
-	function prevSlide() {
-	  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-	}
-  
-  $effect(() => {
-  // This will be recreated whenever `milliseconds` changes
-  const interval = setInterval(nextSlide, 200);
-  
-  return () => {
-  // if a callback is provided, it will run
-  // a) immediately before the effect re-runs
-  // b) when the component is destroyed
-  clearInterval(interval);
-  };
-  });
-	// Configuración de intervalo para avanzar automáticamente cada 3 segundos
+<script>
+	import Uno from '$lib/imagenes/Barca.png';
+	import Dos from '$lib/imagenes/Bayern.png';
+	import Tres from '$lib/imagenes/Juventus.png';
+	import Cuatro from '$lib/imagenes/PSG.png';
+	import Cinco from '$lib/imagenes/RealMadrid.png';
+	import Seis from '$lib/imagenes/City.png';
+	import '../main.css'
+	let currentSlide = $state(0);
+
+	$effect(() => {
+		const interval = setInterval(() => {
+			currentSlide === 5 ? (currentSlide = 0) : (currentSlide += 1);
+		}, 2000);
+
+		return () => {
+			clearInterval(interval);
+		};
+	});
+
 </script>
-
-<div id="carousel">
-  <!-- Botón para ir a la imagen anterior -->
-  <button class="prev" onclick={prevSlide}>‹</button>
- 
-  <!-- Imágenes del carrusel -->
-  {#each slides as slide, index}
-    <div class="slide {index === currentSlide ? 'active' : ''}">
-      <img src={slide.src} alt={slide.alt} />
-    </div>
-  {/each}
-
-  <!-- Botón para ir a la siguiente imagen -->
-  <button class="next" onclick={nextSlide}>›</button>
-</div>
 
 <header>
 	<div class="container">
@@ -98,36 +69,33 @@
 			</section>
 			<div id="slider">
 				<!--Contenedor de botones radius y carrusel de imagenes-->
-				<input type="radio" name="slider" id="s1" checked />
-				<input type="radio" name="slider" id="s2" />
-				<input type="radio" name="slider" id="s3" />
-				<input type="radio" name="slider" id="s4" />
-				<input type="radio" name="slider" id="s5" />
-				<input type="radio" name="slider" id="s6" />
+				<input type="radio" name="slider" id="s1" checked={currentSlide === 0} />
+				<input type="radio" name="slider" id="s2" checked={currentSlide === 1}/>
+				<input type="radio" name="slider" id="s3" checked={currentSlide === 2}/>
+				<input type="radio" name="slider" id="s4" checked={currentSlide === 3}/>
+				<input type="radio" name="slider" id="s5" checked={currentSlide === 4}/>
+				<input type="radio" name="slider" id="s6" checked={currentSlide === 5}/>
 				<label for="s1" id="slide1">
-					<div class="buffer"></div>
-					<img src="TifoBvB.jpg" alt="" />
+					<img src={Uno} alt="" />
 				</label>
-				<label for="s2" id="slide2"
-					><!--El label es la clase del contenedor slide-->
-					<div class="buffer"></div>
-					<img src="TifoLiverpool.jpg" alt="" />
+	
+				<label for="s2" id="slide2">
+					<img src={Dos} alt="" />
 				</label>
+	
 				<label for="s3" id="slide3">
-					<div class="buffer"></div>
-					<img src="TifoMadrid.jpg" alt="" />
+					<img src={Tres} alt="" />
 				</label>
+	
 				<label for="s4" id="slide4">
-					<div class="buffer"></div>
-					<img src="TifoMilan.webp" alt="" />
+					<img src={Cuatro} alt="" />
 				</label>
+	
 				<label for="s5" id="slide5">
-					<div class="buffer"></div>
-					<img src="TifoPsg.jpg" alt="" />
+					<img src={Cinco} alt="" />
 				</label>
-				<label for="s6" id="slide6">
-					<div class="buffer"></div>
-					<img src="Bayern.webp" alt="" />
+				<label for="s6" id="slide5">
+					<img src={Seis} alt="" />
 				</label>
 			</div>
 		</div>
@@ -305,56 +273,3 @@
 	</div>
 </footer>
 
-<!-- Estilos -->
-<style>
-	#carousel {
-	  position: relative;
-	  width: 100%;
-	  max-width: 600px;
-	  margin: auto;
-	  overflow: hidden;
-	}
-  
-	.slide {
-	  display: none;
-	  position: absolute;
-	  width: 100%;
-	  transition: opacity 0.5s ease-in-out;
-	}
-  
-	.slide.active {
-	  display: block;
-	}
-  
-	img {
-	  width: 100%;
-	  height: auto;
-	}
-  
-	/* Botones de navegación */
-	button {
-	  position: absolute;
-	  top: 50%;
-	  transform: translateY(-50%);
-	  background-color: rgba(0, 0, 0, 0.5);
-	  border: none;
-	  color: white;
-	  font-size: 2rem;
-	  padding: 0.5rem;
-	  cursor: pointer;
-	  z-index: 10;
-	}
-  
-	.prev {
-	  left: 10px;
-	}
-  
-	.next {
-	  right: 10px;
-	}
-  
-	button:hover {
-	  background-color: rgba(0, 0, 0, 0.8);
-	}
-  </style>
-  
