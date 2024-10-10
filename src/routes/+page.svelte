@@ -11,7 +11,7 @@
                     <ion-icon name="logo-facebook"></ion-icon>
                     <ion-icon name="logo-instagram"></ion-icon>
                     <ion-icon name="logo-google"></ion-icon>
-                </div>
+                </div>  
             <span>Ingresa tus datos para comenzar</span>
                 <div class="container-input">
                     <ion-icon name="mail-outline"></ion-icon>
