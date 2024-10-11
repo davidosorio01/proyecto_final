@@ -5,6 +5,7 @@
 	import Cuatro from '$lib/imagenes/PSG.png';
 	import Cinco from '$lib/imagenes/RealMadrid.png';
 	import Seis from '$lib/imagenes/City.png';
+	import '$lib/CSS/inicio.css'
 	let currentSlide = $state(0);
 
 	$effect(() => {
