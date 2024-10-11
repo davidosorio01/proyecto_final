@@ -27,28 +27,29 @@ body{
     font-family: sans-serif;
     user-select: none;
 }
-
+/*Se utiliza para seleccionar y aplicar estilos a todos los elementos de tipo "radio" en un documento HTML.*/
 #slider{ 
     position: relative;  
     width: 50%;
     height: 32vw;
     margin: 80px auto;
-    transform-style: preserve-3d;
+    transform-style: preserve-3d;/*indica que los elementos hijos deben mantener su posiciÃ³n relativa al contenedor en un espacio tridimensional, permitiendo que las transformaciones en 3D aplicadas al contenedor tambiÃ©n afecten a los elementos hijos.*/
     perspective: 1400px;
 }
 
-input[type="radio"] {
+input[type="radio"] {/* Selecciona todos los elementos de tipo "radio" en el documento HTML.*//*botones de radio */
     position: relative;
     top: 108%;
     left: 50%;
     width: 18px;
     height: 18px;
     margin: 0 15px 0 0;
-    transform: translateX(-83px);
+    transform: translateX(-83px);/* desplazamiento horizontal a un elemento. En este caso, el elemento se desplazarÃ¡ hacia la izquierda en 83 pÃ­xeles.*/
     cursor: pointer;
     opacity: 0.4;
   }
 
+  /*Inicia el traslation de las 6 imagenes seleccionadas y los botones correspondientes*/
 input[type="radio"]:nth-child(6) {
     margin-right: 0px;
 }
@@ -57,14 +58,14 @@ input[type="radio"]:checked{
     opacity: 1;
 }
 
-#slider label, 
+#slider label, /*Selecciona todos los elementos label que sean descendientes directos de un elemento con el ID "slider".*/
 #slider label img{
   display: flex;
-  position: absolute;
+  position: absolute;/*Depende del contenedor padre*/
   top: 0;
   left: 0;
-  align-items: center;
-  justify-content: center;
+  align-items: center;/*Alineacion de un elementro dentro de un contenedor o bloque*/
+  justify-content: center;/*Es aquel que establece el valor en el align items sobre todos los objetos del contenedor*/
   width: 100%;
   height: 100%;
   border-radius: 8px;
@@ -75,7 +76,7 @@ input[type="radio"]:checked{
   transition: transform 600ms ease;
 }
 
-
+/*permite cambiar el aspecto de diferentes elementos cuando se seleccionan diferentes opciones de un grupo de botones de tipo "radio".*/
 #s1:checked ~ #slide1,
 #s2:checked ~ #slide2,
 #s3:checked ~ #slide3,
@@ -113,7 +114,7 @@ input[type="radio"]:checked{
 #s5:checked ~ #slide1,
 #s6:checked ~ #slide2 {
   transform: translate3d(40%, 0, -250px);
-  box-shadow: 0 1px 4px ☐ rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 4px â˜ rgba(0, 0, 0, 0.4);
 }
 
 #s1:checked ~ #slide4,
@@ -136,11 +137,13 @@ input[type="radio"]:checked{
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
+/*Fin de traslacion de botones*/
+
 header{
     width: 100%;
     height: 100px;
     z-index: 100;
-    position: fixed;/* se le está asignando a ese elemento un valor alto en la escala de profundidad, lo que significa que estará por encima de elementos con un valor de z-index menor o por defecto*/
+    position: fixed;/* se le estÃ¡ asignando a ese elemento un valor alto en la escala de profundidad, lo que significa que estarÃ¡ por encima de elementos con un valor de z-index menor o por defecto*/
 }
 
 .container {
@@ -154,7 +157,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 20px;
+    padding: 0px 20px;/*Orden del padding: top, right, bottom y left*/
 }
 
 .logo{
@@ -188,7 +191,7 @@ header{
 }
 
 .menu ul li {
-    margin: 20px 16px;
+    margin: 20px 16px;/*Arriba abajo e izquierda derecha*/
 }
 
 .menu nav ul li a{
@@ -196,7 +199,7 @@ header{
     font-size: 16px;
     position: relative;
 }
-.menu nav ul li a::after {
+.menu nav ul li a::after { /*esta lÃ­nea de cÃ³digo se utiliza para personalizar la apariencia visual de los enlaces en un menÃº de navegaciÃ³n agregando un elemento decorativo despuÃ©s del texto de los enlaces.*/
     content: "";
     width: 0px;
     height: 3px;
@@ -204,14 +207,14 @@ header{
     position: absolute;
     left: 0;
     bottom: -6px;
-    transition: 0.5s;
+    transition: 0.5s;/*Permite definir la transiciÃ³n entre dos estados de un elemento. Hay diferentes estados que pueden ser definidos utilizando pseudoclases como :hover o :active*/
 }
 
 nav ul li a:hover::after {
     width: 100%;
 }
 
-.btn__quote{
+.btn__quote{/*Boton "Volver"*/
     display: block;
     color: white;
     padding: 8px 40px;
@@ -227,6 +230,7 @@ nav ul li a:hover::after {
     background: #e9284e;
 }
 
+/*portada de inicio*/
 
 .container__cover{
     padding-top: 100px;
@@ -267,12 +271,12 @@ nav ul li a:hover::after {
     margin-top: 20px;
     padding: 10px 20px;
     text-align: center;
-    font-weight: 500;
+    font-weight: 500;/*cambiar cuan fina o gruesa queremos la fuente al darle un valor como normal , lighter , bold , or bolder. El grosor de la letra*/
     background-color: #e9284e;
     color:white ;
     border-radius: 8px;
     border: 2px solid transparent;
-    cursor: pointer;
+    cursor: pointer;/*especifica el tipo de cursor que se mostrara cuando este se encuentre sobre un elemento.*/
     transition: all 300ms;
 }
 
@@ -281,6 +285,8 @@ nav ul li a:hover::after {
     background: transparent;
     border: 2px solid black;
 }
+
+/*Container Cards*/
 
 .container__card-primary{
     padding-top: 100px;
@@ -358,7 +364,7 @@ img{
     border-radius: 12px;
 
 }
-
+/*Sobre Nosotros*/
 .container__about{
     padding: 100px 0px;
     background: #b60f1d;
@@ -367,8 +373,8 @@ img{
 }
 
 .about{
-    max-width: 1200px;
-    margin: auto;
+    max-width: 1200px;/*Anchor maximo*/
+    margin: auto;/*especifica el tipo de cursor que se mostrara cuando este se encuentre sobre un elemento.*/
     padding: 0px 20px;
     display: flex;
     align-items: center;
@@ -403,6 +409,8 @@ img{
  
 }
 
+/*Servicios*/
+
 .card__service img{
     width: 50px;
 }
@@ -420,7 +428,7 @@ img{
 a{
     color: black;
 }
-.card_service.box_card-primary{
+.card__service.box__card-primary{
     background-color: rgba(255, 255, 255, 0.959);
 }
 
@@ -435,14 +443,14 @@ footer {
 .footer-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-around;/*Espacio entre los elementos que estan dentro del contenedor*/
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
 .footer-section {
-    flex: 1;
+    flex: 1;/*flex es una propiedad resumida que indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible. Los elementos flexibles pueden ser estirados para utilizar el espacio disponible*/
     margin: 10px;
     min-width: 200px;
 }
@@ -496,7 +504,7 @@ footer{
 
 .container__footer{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;/*especifica si los elementos "hijos" estÃ¡n obligados a permanecer en una misma lÃ­nea o pueden fluir en varias lÃ­neas. */
     justify-content: space-between;
     max-width: 1200px;
     margin: auto;
@@ -505,7 +513,7 @@ footer{
 
 .box__footer{
     display: flex;
-    flex-direction: column;
+    flex-direction: column;/*define la direcciÃ³n principal, es decir, la direcciÃ³n en la que se colocan los elementos flexibles en los contenedores. En este caso de forma vertical*/
     padding: 40px;
 }
 

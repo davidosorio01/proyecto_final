@@ -1,10 +1,10 @@
 //import { db } from "$lib/server/database/connect"
-//import { player } from "$lib/server/database/data"
+//import { player }  from "$lib/server/database/data"
 
 //export async function load(){
-
-    //const jugadores = await db.select().from(player);
-    //console.log(jugadores);
-    //return { jugadores }
+    
+  //  const Jugadores = await db.select().from(player);
+    //console.log(Jugadores);
+    //return { Jugadores }
 
 //}
