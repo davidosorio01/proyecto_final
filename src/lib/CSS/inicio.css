@@ -26,6 +26,7 @@
 body{
     font-family: sans-serif;
     user-select: none;
+    background-color: #b60f1d;
 }
 /*Se utiliza para seleccionar y aplicar estilos a todos los elementos de tipo "radio" en un documento HTML.*/
 #slider{ 
