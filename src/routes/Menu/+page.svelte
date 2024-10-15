@@ -67,7 +67,7 @@
                 <li><a href="#Contactanos">Contactanos</a></li>
               </ul>
             </nav>
-            <a href="/" class="btn__quote">Volver</a>
+            <a href="./" class="btn__quote">Volver</a>
           </div>
         </div>
       </div>

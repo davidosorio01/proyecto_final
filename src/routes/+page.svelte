@@ -34,7 +34,7 @@
                     <input type="password" placeholder="Password" required>
                 </div>
                 <a href="l">¿Olvidaste tu contraseña?</a>
-            <button  class="button">INICIAR SESIÓN</button>
+            <button class="button">INICIAR SESIÓN</button>
         </form>
     </div>
 
