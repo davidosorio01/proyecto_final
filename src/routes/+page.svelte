@@ -4,10 +4,8 @@
     import '$lib/CSS/inicio_sesion.css'
     import Atalanta from '$lib/IMAGES/Atlanta.webp'
 </script>
-
 <svelte:head>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </svelte:head>
 
@@ -24,10 +22,6 @@
                 <div class="container-input">
                     <ion-icon name="mail-outline"></ion-icon>
                     <input type="text" placeholder="Email" required>
-                </div>
-                <div class="container-input">
-                    <ion-icon name="tablet-landscape-outline"></ion-icon>
-                    <input type="text" placeholder="T.I" required>
                 </div>
                 <div class="container-input">
                     <ion-icon name="lock-closed-outline"></ion-icon>
@@ -49,27 +43,23 @@
             <span>Ingresa los siguientes datos para registrarte</span>
             <div class="container-input">
                 <ion-icon name="person-outline"></ion-icon>
-                <input type="text" placeholder="Nombre" required>
+                <input name="nombre" type="text" placeholder="Nombre" required>
             </div>
             <div class="container-input">
                 <ion-icon name="person-outline"></ion-icon>
-                <input type="text" placeholder="Apellidos" required>
-            </div>
-            <div class="container-input">
-                <ion-icon name="tablet-landscape-outline"></ion-icon>
-                <input type="text" placeholder="T.I" required>
+                <input name="apellido" type="text" placeholder="Apellidos" required>
             </div>
             <div class="container-input">
                 <ion-icon name="calendar"></ion-icon>
-                <input type="date" placeholder="Fecha de nacimiento" required>
+                <input name="nacimiento" type="date" placeholder="Fecha de nacimiento" required>
             </div>
             <div class="container-input">
                 <ion-icon name="mail-outline"></ion-icon>
-                <input type="text" placeholder="Email" required>
+                <input name="email" type="text" placeholder="Email" required>
             </div>
             <div class="container-input">
                 <ion-icon name="lock-closed-outline"></ion-icon>
-                <input type="password" placeholder="Password" required>
+                <input name="password" type="password" placeholder="Password" required>
             </div>
             <button class="button" >REGISTRARSE</button>
         </form>

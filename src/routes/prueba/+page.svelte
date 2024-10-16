@@ -1,16 +1,23 @@
-<script>
-    let {data} = $props();
-    let { jugadores } = data;
-</script>
+<script>  
+	let { data } = $props();  
+    import "$lib/CSS/prueba.css"
+</script>  
 
-<h1 style="text-align: center;">
-    JUGADORES CVO
-</h1>
-{#each data.jugadores as jugador (jugador.id)}
-    <p>
-        id: {jugador.id}
-    </p>
-    <h1>
-        {jugador.nombre}
-    </h1>
-{/each}
+<div class="container">  
+	<h1>AGREGATE COMO JUGADOR</h1>  
+
+	<form method="POST">  
+		<label for="nombre">  
+			Nombre del Jugador  
+			<input name="nombre" type="text" placeholder="nombre jugador" autocomplete="off" />  
+		</label>  
+	</form>  
+
+    <ul class="todos">  
+		{#each data.jugadores as jugador (jugador.id)}  
+			<li>  
+				{jugador.nombre}  
+			</li>  
+		{/each}  
+	</ul>  
+</div>

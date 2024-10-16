@@ -16,6 +16,7 @@
     import MD from '$lib/IMAGES/LogoMD.png'
     import LogoPagina from '$lib/IMAGES/LogoPag.jpg';
     import '$lib/CSS/inicio.css'
+    import Face from '$lib/IMAGES/Facebook.svelte'
 
     let currentSlide = 0;
     const slides = [
@@ -46,9 +47,6 @@
     });
   </script>
 
-  <svelte:head>
-    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
-  </svelte:head>
   <!-- Aquí va el resto de tu componente -->
   <main>
     <header>
@@ -165,7 +163,7 @@
       </div>
       <div class="box__footer">
         <h2>Redes Sociales</h2>
-        <a href="/"><i class="fab fa-facebook-square"></i> Facebook</a>
+        <a href="/">Facebook</a>
         <a href="/"><i class="fa-brands fa-tiktok"></i> Tik Tok</a>
         <a href="/"><i class="fab fa-instagram-square"></i> Instagram</a>
       </div>
@@ -252,3 +250,5 @@
     }
 
   </style>
+
+  <Face />
