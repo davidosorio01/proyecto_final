@@ -16,7 +16,6 @@
     import MD from '$lib/IMAGES/LogoMD.png'
     import LogoPagina from '$lib/IMAGES/LogoPag.jpg';
     import '$lib/CSS/inicio.css'
-    import Face from '$lib/IMAGES/Facebook.svelte'
 
     let currentSlide = 0;
     const slides = [
@@ -47,12 +46,15 @@
     });
   </script>
 
-  <!-- Aquí va el resto de tu componente -->
+  <svelte:head>
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+  </svelte:head>
+    <!-- Aquí va el resto de tu componente -->
   <main>
     <header>
       <div class="container">
         <div class="container__header">
-          <div class="logo">
+          <div class="logo" data-sveltekit-preload-data="tap">
             <a href="/">
               <img src={LogoPagina} alt="Logo">
             </a>
@@ -65,7 +67,7 @@
                 <li><a href="#Contactanos">Contactanos</a></li>
               </ul>
             </nav>
-            <a href="./" class="btn__quote">Volver</a>
+            <a href="./" class="btn__quote" data-sveltekit-preload-data="tap">Volver</a>
           </div>
         </div>
       </div>
@@ -78,7 +80,7 @@
           <p>
             Somos una página web deportiva que ofrece noticias, estadísticas y análisis de una gran variedad de deportes y ligas alrededor del mundo. Además, promovemos e incentivamos el conocimiento del deporte, sus beneficios y todo aquello que se debe conocer de este increíble mundo.
           </p>
-          <a href="/" class="btn__text-cover btn__text">Empezar</a>
+          <a href="/prueba" class="btn__text-cover btn__text" data-sveltekit-preload-data="tap" data-sveltekit-reload>Empezar</a>
         </section>
         <div id="slider">
           {#each slides as slide, i}
@@ -101,7 +103,7 @@
   
     <div class="container__about div__offset" id="SobreNosotros">
       <div class="about">
-        <div class="text__about">
+        <div class="text__about" data-sveltekit-preload-data="tap">
           <h1>Sobre nosotros</h1>
           <p>
             Somos un grupo de estudiantes apasionados por la programación y el deporte, por esto hemos querido fusionar nuestras habilidades y nuestros gustos para así promover la realización del deporte, sin olvidar también la incentivación al adquirir un conocimiento sobre este mundo tan vasto.
@@ -154,16 +156,16 @@
         <a href="https://www.nba.com/">Basquetbol</a>
         <a href="https://www.google.com/search?q=Tenis+deporte">Tenis</a>
       </div>
-      <div class="box__footer">
+      <div class="box__footer" data-sveltekit-preload-data="tap">
         <h2>Compañia</h2>
         <a href="/">Acerca de</a>
         <a href="/">Trabajos</a>
         <a href="/">Procesos</a>
         <a href="/">Servicios</a>
       </div>
-      <div class="box__footer">
+      <div class="box__footer" data-sveltekit-preload-data="tap" >
         <h2>Redes Sociales</h2>
-        <a href="/">Facebook</a>
+        <a href="/"><i class="fab fa-facebook-square"></i>Facebook</a>
         <a href="/"><i class="fa-brands fa-tiktok"></i> Tik Tok</a>
         <a href="/"><i class="fab fa-instagram-square"></i> Instagram</a>
       </div>
@@ -250,5 +252,3 @@
     }
 
   </style>
-
-  <Face />

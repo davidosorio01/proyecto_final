@@ -1,32 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #b60f1d;
+}
+/* Estilos del navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b60f1d;
+    padding: 1px 10px;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.navbar img {
+    width: 200px;
+    height: 110px; /* Ajuste del tamaño de la imagen */
+    border-radius: 50%; /* Imagen redonda */
+}
+
+.navbar .back-button {
+    display: block;
+    color: white;
+    padding: 8px 40px;
+    border: 2.5px solid black; 
+    border-radius: 8px;
+    font-weight: 500;
+    margin: 0px 20px;
+    transition: all 300ms;
+}
+
+.navbar .back-button:hover {
+    color: white;
+    background: #e9284e;
+}
+
+.navbar .back-button i {
+    margin-right: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación de transición */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="text"]:hover,
+input[type="text"]:focus {
+    transform: translateY(-5px); /* Desplazamiento hacia arriba */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    border-color: #3498db; /* Color del borde */
+    outline: none;
+}
+
+input[type="text"]::placeholder {
+    color: #aaa;
+}
+
 .container {
-    width: 80%;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #000000; /* Cambié a blanco para mejor contraste con el fondo */
 }
 
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     gap: 20px;
 }
 
 .card {
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     padding: 20px;
-    width: 200px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.card h2 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación de transición */
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px); /* Efecto flotante al pasar el ratón */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más grande */
+}
+
+.card h2 {
+    margin: 0 0 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-3px); /* Botón se desplaza hacia arriba al pasar el ratón */
+}
+
+.eliminar {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.eliminar:hover {
+    background-color: #c0392b;
+}
+
+.editar {
+    background-color: #3498db;
+    color: white;
+}
+
+.editar:hover {
+    background-color: #2980b9;
 }

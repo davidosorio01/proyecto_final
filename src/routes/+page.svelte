@@ -10,9 +10,9 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </svelte:head>
 
-<div class="container" class:toggle={signIn}>
+<div class="container" class:toggle={signIn} data-sveltekit-preload-data="tap" data-sveltekit-reload >
     <div class="container-form">
-        <form class="sign-in" action="/Menu">
+        <form class="sign-in" action="/Menu" >
             <h2>Iniciar Sesión</h2>
                 <div class="social-networks">
                     <ion-icon name="logo-facebook"></ion-icon>
@@ -33,7 +33,7 @@
         </form>
     </div>
 
-    <div class="container-form" class:toggle={signIn} >
+    <div class="container-form" class:toggle={signIn} data-sveltekit-preload-data="tap" >
         <form class="sign-up">
             <h2>¿No tienes una cuenta?¡Registrate!</h2>
                 <div class="social-networks">
@@ -62,7 +62,7 @@
                 <ion-icon name="lock-closed-outline"></ion-icon>
                 <input name="password" type="password" placeholder="Password" required>
             </div>
-            <button class="button" >REGISTRARSE</button>
+            <button class="button">REGISTRARSE</button>
         </form>
     </div>
 
