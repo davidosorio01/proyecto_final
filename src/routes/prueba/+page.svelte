@@ -1,5 +1,6 @@
 <script>  
 	let { data } = $props();  
+	let { jugadores } = data;
     import "$lib/CSS/prueba.css"
 </script>  
 
@@ -13,11 +14,18 @@
 		</label>  
 	</form>  
 
-    <ul class="todos">  
+    <div class="card-container">  
 		{#each data.jugadores as jugador (jugador.id)}
-			<li>  
-				{jugador.nombre}  
-			</li>  
+			<div class="card">  
+				<h2>{jugador.nombre}</h2>  
+				<form action="?/borrar" method="POST">
+					<input type="hidden" name="id" value={jugador.id}>
+					<button formaction="?/borrar" class="eliminar">
+					Eliminar
+					</button>  
+				</form>
+				
+			</div>  
 		{/each}  
-	</ul>  
+	</div>  
 </div>
