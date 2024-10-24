@@ -28,7 +28,7 @@
                     <ion-icon name="lock-closed-outline"></ion-icon>
                     <input type="password" placeholder="Password" required>
                 </div>
-                <a href="l">¿Olvidaste tu contraseña?</a>
+                <a href="/olvidar_contraseña">¿Olvidaste tu contraseña?</a>
             <button class="button">INICIAR SESIÓN</button>
         </form>
     </div>

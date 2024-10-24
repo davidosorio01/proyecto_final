@@ -28,13 +28,23 @@
     ];
   
     const diarios = [
-      { name: 'Diario AS', url: 'https://colombia.as.com/', logo: AS },
-      { name: 'ESPN', url: 'https://www.espn.com.co/', logo: ESPN },
-      { name: "Diario L'Equipe", url: 'https://www.lequipe.fr/', logo: Lequipe },
-      { name: 'Diario Sport', url: 'https://www.sport.es/co/', logo: sports },
-      { name: 'Diario Marca', url: 'https://www.marca.com/', logo: M },
-      { name: 'Diario Mundo Deportivo', url: 'https://www.mundodeportivo.com/', logo: MD },
+      { name: 'Diario AS', url: 'https://colombia.as.com/', logo: AS, newsIndex: 0},
+      { name: 'ESPN', url: 'https://www.espn.com.co/', logo: ESPN, newsIndex: 1},
+      { name: "Diario L'Equipe", url: 'https://www.lequipe.fr/', logo: Lequipe, newsIndex: 2 },
+      { name: 'Diario Sport', url: 'https://www.sport.es/co/', logo: sports, newsIndex: 3},
+      { name: 'Diario Marca', url: 'https://www.marca.com/', logo: M, newsIndex: 4},
+      { name: 'Diario Mundo Deportivo', url: 'https://www.mundodeportivo.com/', logo: MD, newsIndex: 5},
     ];
+
+    const noticias = [
+      { text: 'Es un periódico deportivo español, Se caracteriza por su amplia cobertura del fútbol, tanto nacional como internacional'},
+      { text: 'El Diario ESPN es una publicación digital de la cadena deportiva ESPN que ofrece noticias, análisis y opiniones sobre una amplia variedad de deportes.'},
+      { text: 'Es el diario deportivo líder en Francia. se caracteriza por su amplia cobertura del fútbol, pero también ofrece información detallada sobre tenis, ciclismo y deportes de motor.'},
+      { text: 'Ofrece noticias de última hora, resultados en vivo, análisis profundos y entrevistas exclusivas sobre fútbol, motor, tenis y mucho más.'},
+      { text: 'Marca ofrece noticias, resultados, estadísticas y análisis de una amplia gama de deportes, incluyendo fútbol, baloncesto, tenis, motor y ciclismo'},
+      { text: 'Es uno de los diarios deportivos más antiguos y prestigiosos de España, conocido por su amplia cobertura sobre deportes como el futbol, el tenis, el baloncesto y el motor.'},
+      { text: 'En SS somos un equipo de apasionados por el deporte que creemos en el poder que este tiene para unir a las personas y crear momentos inolvidables.'}
+    ]
   
     function nextSlide() {
       currentSlide = (currentSlide + 1) % slides.length;
@@ -54,7 +64,7 @@
     <header>
       <div class="container">
         <div class="container__header">
-          <div class="logo" data-sveltekit-preload-data="tap">
+          <div class="logo" data-sveltekit-preload-data="tap" data-sveltekit-reload>
             <a href="/">
               <img src={LogoPagina} alt="Logo">
             </a>
@@ -67,7 +77,7 @@
                 <li><a href="#Contactanos">Contactanos</a></li>
               </ul>
             </nav>
-            <a href="./" class="btn__quote" data-sveltekit-preload-data="tap">Volver</a>
+            <a href="/" class="btn__quote" data-sveltekit-preload-data="tap" data-sveltekit-reload>INICIAR SESIÓN</a>
           </div>
         </div>
       </div>
@@ -80,7 +90,7 @@
           <p>
             Somos una página web deportiva que ofrece noticias, estadísticas y análisis de una gran variedad de deportes y ligas alrededor del mundo. Además, promovemos e incentivamos el conocimiento del deporte, sus beneficios y todo aquello que se debe conocer de este increíble mundo.
           </p>
-          <a href="/prueba" class="btn__text-cover btn__text" data-sveltekit-preload-data="tap" data-sveltekit-reload>Empezar</a>
+          <a href="/empezar" class="btn__text-cover btn__text" data-sveltekit-preload-data="tap" data-sveltekit-reload>Empezar</a>
         </section>
         <div id="slider">
           {#each slides as slide, i}
@@ -129,7 +139,9 @@
               <img src={diario.logo} alt={diario.name}>
               <h2>{diario.name}</h2>
               <a href={diario.url}>
-                <p>Es un periódico deportivo español, Se caracteriza por su amplia cobertura del fútbol, tanto nacional como internacional.</p>
+                <p>
+                  {noticias[diario.newsIndex].text}
+                </p>
               </a>
               <a href={diario.url}><i class="fa-solid fa-arrow-right"></i></a>
             </div>
@@ -163,7 +175,7 @@
         <a href="/">Procesos</a>
         <a href="/">Servicios</a>
       </div>
-      <div class="box__footer" data-sveltekit-preload-data="tap" >
+      <div class="box__footer" data-sveltekit-preload-data="tap" data-sveltekit-reload>
         <h2>Redes Sociales</h2>
         <a href="/"><i class="fab fa-facebook-square"></i>Facebook</a>
         <a href="/"><i class="fa-brands fa-tiktok"></i> Tik Tok</a>
