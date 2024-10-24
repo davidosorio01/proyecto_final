@@ -3,6 +3,7 @@
     let signIn = false
     import '$lib/CSS/inicio_sesion.css'
     import Atalanta from '$lib/IMAGES/Atlanta.webp'
+ 
 </script>
 
 <svelte:head>

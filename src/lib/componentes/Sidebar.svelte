@@ -11,7 +11,7 @@
 	</a>
 	<ul class="side-menu top" data-sveltekit-preload-data="tap" data-sveltekit-reload>
 		<li class:active={activeMenuItem === 'panel'}>
-			<a href="/" on:click|preventDefault={() => setActiveMenuItem('panel')}>
+			<a href="/empezar" on:click|preventDefault={() => setActiveMenuItem('panel')}>
 				<i class="bx bxs-dashboard"></i>
 				<span class="text">Panel</span>
 			</a>
@@ -19,7 +19,7 @@
 	</ul>
 	<ul class="side-menu" data-sveltekit-preload-data="tap" data-sveltekit-reload>
 		<li class:active={activeMenuItem === 'buzon'}>
-			<a href="/buzon" on:click|preventDefault={() => setActiveMenuItem('buzon')}>
+			<a href="/buzon">
 				<i class="bx bx-envelope"></i>
 				<span class="text">Buzón</span>
 			</a>
