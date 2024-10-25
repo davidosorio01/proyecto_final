@@ -1,8 +1,10 @@
 import { sqliteTable, integer, text } from "drizzle-orm/sqlite-core"
+  import { sql } from "drizzle-orm"
 
 export const player = sqliteTable("player", {
 	id: integer("id").primaryKey().notNull(),
 	nombre: text("nombre").notNull(),
+	grado: text("grado"),
 });
 
 export const equipos = sqliteTable("equipos", {

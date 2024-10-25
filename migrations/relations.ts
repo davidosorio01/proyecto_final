@@ -1,5 +1,5 @@
 import { relations } from "drizzle-orm/relations";
-import { equipos, equiposTorneo, torneos, partidos, player } from "../src/lib/server/database/schema";
+import { equipos, equiposTorneo, torneos, partidos, player } from "./schema";
 
 export const equiposTorneoRelations = relations(equiposTorneo, ({one}) => ({
 	equipo_equipo2: one(equipos, {
