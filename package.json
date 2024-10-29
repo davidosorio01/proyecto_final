@@ -35,7 +35,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@libsql/client": "^0.10.0",
+		"@libsql/client": "^0.14.0",
 		"@neon-rs/load": "^0.1.81",
 		"@sveltejs/adapter-vercel": "^5.4.6",
 		"bcrypt": "^5.1.1",
