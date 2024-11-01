@@ -1,8 +1,16 @@
-<script lang="ts">  
-	export let form: { invalid?: boolean; credentials?: boolean } = {}; // Define las propiedades esperadas  
-    let btnSignUp;  
-    let signIn = false;  
-    import '$lib/CSS/inicio_sesion.css';    
+<script lang="ts">
+	export let form: { invalid?: boolean; credentials?: boolean } = {}; // Define las propiedades esperadas
+	let btnSignUp;
+	let signIn = false;
+	import '$lib/CSS/inicio_sesion.css';
+	import Swal from 'sweetalert2';
+
+	Swal.fire({
+		title: "¡Importante!",
+		text: 'Debes registrarte (o iniciar sesión si ya tienes una cuenta) para acceder a Sport Score.',  
+  		icon: 'warning',  
+  		confirmButtonText: 'Aceptar'
+	});
 </script>
 
 <svelte:head>
@@ -45,7 +53,7 @@
 				<p class="error">Usuario o contraseña invalido</p>
 			{/if}
 			<button class="button">INICIAR SESIÓN</button>
-        </form>
+		</form>
 	</div>
 
 	<div class="container-form" class:toggle={signIn} data-sveltekit-preload-data="tap">
