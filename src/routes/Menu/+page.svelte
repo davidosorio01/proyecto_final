@@ -16,6 +16,14 @@
 	import MD from '$lib/IMAGES/LogoMD.png';
 	import LogoPagina from '$lib/IMAGES/LogoPag.jpg';
 	import '$lib/CSS/Menu.css';
+	import Swal from 'sweetalert2';
+
+	Swal.fire({
+		title: "¡Bienvenido!",
+		text: 'Ya puedes disfrutar de nuestra página web. Recuerda que en 30 días, debes iniciar sesión de nuevo.',  
+  		icon: 'success',  
+  		confirmButtonText: 'Aceptar'
+	});
 
 	let currentSlide = 0;
 	const slides = [
