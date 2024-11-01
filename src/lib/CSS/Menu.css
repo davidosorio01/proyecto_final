@@ -7,6 +7,12 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
+section[id]{
+    scroll-margin-top: 70px;
+}
 :root{
     --color_text-primary: #c7c8c9;
     --color_text-secundary: #080606;
@@ -24,9 +30,9 @@
 }
 
 body{
+    background-color: #b60f1d;
     font-family: sans-serif;
     user-select: none;
-    background-color: #b60f1d;
 }
 /*Se utiliza para seleccionar y aplicar estilos a todos los elementos de tipo "radio" en un documento HTML.*/
 #slider{ 
@@ -34,7 +40,7 @@ body{
     width: 50%;
     height: 32vw;
     margin: 80px auto;
-    transform-style: preserve-3d;/*indica que los elementos hijos deben mantener su posiciÃ³n relativa al contenedor en un espacio tridimensional, permitiendo que las transformaciones en 3D aplicadas al contenedor tambiÃ©n afecten a los elementos hijos.*/
+    transform-style: preserve-3d;/*indica que los elementos hijos deben mantener su posición relativa al contenedor en un espacio tridimensional, permitiendo que las transformaciones en 3D aplicadas al contenedor también afecten a los elementos hijos.*/
     perspective: 1400px;
 }
 
@@ -45,7 +51,7 @@ input[type="radio"] {/* Selecciona todos los elementos de tipo "radio" en el doc
     width: 18px;
     height: 18px;
     margin: 0 15px 0 0;
-    transform: translateX(-83px);/* desplazamiento horizontal a un elemento. En este caso, el elemento se desplazarÃ¡ hacia la izquierda en 83 pÃ­xeles.*/
+    transform: translateX(-83px);/* desplazamiento horizontal a un elemento. En este caso, el elemento se desplazará hacia la izquierda en 83 píxeles.*/
     cursor: pointer;
     opacity: 0.4;
   }
@@ -115,7 +121,7 @@ input[type="radio"]:checked{
 #s5:checked ~ #slide1,
 #s6:checked ~ #slide2 {
   transform: translate3d(40%, 0, -250px);
-  box-shadow: 0 1px 4px â˜ rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 4px ☐ rgba(0, 0, 0, 0.4);
 }
 
 #s1:checked ~ #slide4,
@@ -144,7 +150,7 @@ header{
     width: 100%;
     height: 100px;
     z-index: 100;
-    position: fixed;/* se le estÃ¡ asignando a ese elemento un valor alto en la escala de profundidad, lo que significa que estarÃ¡ por encima de elementos con un valor de z-index menor o por defecto*/
+    position: fixed;/* se le está asignando a ese elemento un valor alto en la escala de profundidad, lo que significa que estará por encima de elementos con un valor de z-index menor o por defecto*/
 }
 
 .container {
@@ -153,7 +159,6 @@ header{
 
 .container__header{
     max-width: 100%;
-    height: 100%;
     box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.2);
     display: flex;
     justify-content: space-between;
@@ -168,8 +173,8 @@ header{
 }
 
 .logo img{
-    width: 160px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
 
 }
 
@@ -200,7 +205,7 @@ header{
     font-size: 16px;
     position: relative;
 }
-.menu nav ul li a::after { /*esta lÃ­nea de cÃ³digo se utiliza para personalizar la apariencia visual de los enlaces en un menÃº de navegaciÃ³n agregando un elemento decorativo despuÃ©s del texto de los enlaces.*/
+.menu nav ul li a::after { /*esta línea de código se utiliza para personalizar la apariencia visual de los enlaces en un menú de navegación agregando un elemento decorativo después del texto de los enlaces.*/
     content: "";
     width: 0px;
     height: 3px;
@@ -208,7 +213,7 @@ header{
     position: absolute;
     left: 0;
     bottom: -6px;
-    transition: 0.5s;/*Permite definir la transiciÃ³n entre dos estados de un elemento. Hay diferentes estados que pueden ser definidos utilizando pseudoclases como :hover o :active*/
+    transition: 0.5s;/*Permite definir la transición entre dos estados de un elemento. Hay diferentes estados que pueden ser definidos utilizando pseudoclases como :hover o :active*/
 }
 
 nav ul li a:hover::after {
@@ -505,7 +510,7 @@ footer{
 
 .container__footer{
     display: flex;
-    flex-wrap: wrap;/*especifica si los elementos "hijos" estÃ¡n obligados a permanecer en una misma lÃ­nea o pueden fluir en varias lÃ­neas. */
+    flex-wrap: wrap;/*especifica si los elementos "hijos" están obligados a permanecer en una misma línea o pueden fluir en varias líneas. */
     justify-content: space-between;
     max-width: 1200px;
     margin: auto;
@@ -514,8 +519,12 @@ footer{
 
 .box__footer{
     display: flex;
-    flex-direction: column;/*define la direcciÃ³n principal, es decir, la direcciÃ³n en la que se colocan los elementos flexibles en los contenedores. En este caso de forma vertical*/
+    flex-direction: column;/*define la dirección principal, es decir, la dirección en la que se colocan los elementos flexibles en los contenedores. En este caso de forma vertical*/
     padding: 40px;
+}
+svg{
+    width: 25px;
+    height: 20px;
 }
 
 .box__footer .logo img{

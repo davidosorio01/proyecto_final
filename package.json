@@ -19,7 +19,9 @@
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^4.0.0-next.6",
+		"@types/bcrypt": "^5.0.2",
 		"@types/eslint": "^9.6.0",
+		"@types/jquery": "^3.5.32",
 		"drizzle-kit": "^0.24.2",
 		"eslint": "^9.0.0",
 		"eslint-config-prettier": "^9.1.0",
@@ -42,7 +44,9 @@
 		"bufferutil": "^4.0.8",
 		"dotenv": "^16.4.5",
 		"drizzle-orm": "^0.33.0",
+		"jquery": "^3.7.1",
 		"libsql": "^0.4.6",
+		"owl.carousel": "^2.3.4",
 		"utf-8-validate": "^6.0.4"
 	}
 }
