@@ -25,6 +25,10 @@ body{
     width: 100%;
     overflow: hidden;
 }
+.container-form p{
+    color: #b60f1d;
+    text-decoration: underline;
+}
 .container-form form{
     height: 100%;
     display: flex;
