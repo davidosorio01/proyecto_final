@@ -4,6 +4,7 @@
 
 <div class="box-info" id="sports-container">
     {#each filteredDeportes as deporte}
+    <a href="/futbol">
         <div class="sport-item">
             <img src={deporte.logo} alt={deporte.name}>
             <span class="text">
@@ -11,5 +12,6 @@
                 <p>Conocer más</p>
             </span>
         </div>
+    </a>
     {/each}
 </div>

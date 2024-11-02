@@ -1,0 +1,507 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800&display=swap");  
+
+
+* {  
+    margin: 0;  
+    font-family: Poppins, sans-serif;  
+} 
+.logo {
+    width: 60px; 
+    height: 60px; 
+}
+img{
+    width: 500px;
+    height: 500px;
+}
+.conlist{
+    display: flex;
+}
+
+
+.container {  
+    display: flex;  
+}  
+
+/* Estilos para texto e imágenes */  
+.text {  
+    width: 60%;  
+    padding: 20px;  
+    margin-right: 50px;  
+}  
+
+.image {  
+    width: 40%;  
+    padding-top: 20px;  
+    margin-left: 30px;  
+}  
+
+.image p {  
+    margin-top: 2px;  
+}  
+
+.image img {  
+    width: 75%;  
+    height: 90%;  
+    border: 2px solid black;  
+    border-radius: 10px;  
+}  
+
+p{
+    margin-top: 30px;
+}
+
+/* Estilos para el título */  
+.title {  
+    font-size: 36px;  
+    font-weight: 600;  
+    color: rgb(184, 15, 29);  
+}  
+
+
+/* Estilos para la navegación */  
+nav {  
+    width: 100%;  
+    height: 40px;  
+    position: fixed;  
+    background-color: rgb(184, 15, 29);  
+    color: #fff;  
+    padding: 10px;  
+    display: flex;  
+    align-items: center;  
+    z-index: 9999;  
+} 
+header {  
+    padding-bottom: 60px;  
+}  
+
+/* Estilos de lecciones */  
+.lesson {  
+    padding: 70px 70px;  
+}  
+
+/* Barra de progreso */  
+.progress-bar {  
+    display: flex;  
+    align-items: center;  
+    background-color: #fffe;  
+    border: 1px solid rgb(109, 109, 109);  
+    border-radius: 5px;  
+    padding: 8px;  
+}  
+
+/* Estilos para formas */  
+.circle {  
+    width: 13px;  
+    height: 13px;  
+    margin: 0 2px;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    background-color: #00d600;  
+    border-radius: 50%;  
+    border: 1px solid rgba(0, 0, 0, .404);  
+}  
+
+.square {  
+    width: 13px;  
+    height: 13px;  
+    margin: 0 2px;  
+    background-color: #00d600;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    border: 1px solid rgba(0, 0, 0, .404);  
+}  
+
+.rombo {  
+    width: 13px;  
+    height: 13px;  
+    margin: 0 4px;  
+    background-color: #00d600;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    transform: rotate(45deg);  
+    border-radius: 10%;  
+    border: 1px solid rgba(0, 0, 0, .404);  
+}  
+
+/* Estilos para números */  
+.numero {  
+    position: relative;  
+    color: #fff;  
+    font-size: 15px;  
+    font-weight: 500;  
+    transform: rotate(-45deg);  
+}  
+
+.numero-2 {  
+    position: relative;  
+    color: #fff;  
+    font-size: 15px;  
+    font-weight: 500;  
+}  
+
+/* Efectos al pasar el cursor en barra de progreso */  
+.progress-bar  * {  
+    cursor: pointer;  
+}  
+
+.progress-bar :hover{  
+    background-color: #7b7b7b;  
+}  
+
+/* Estilo para el menú de toggles */  
+.menu-toggle {  
+    cursor: pointer;  
+    width: 30px;  
+    height: 30px;  
+    position: absolute;  
+    right: 70px;  
+    z-index: 9999;  
+    display: flex;  
+    flex-direction: column;  
+    justify-content: space-between;  
+}  
+
+.menu-toggle div {  
+    width: 35px;  
+    height: 5px;  
+    border-radius: 5px;  
+    background-color: #fff;  
+    transition: .4s;  
+}  
+
+.menu-toggle.open .bar1 {  
+    transform: rotate(-45deg) translate(-9px, 9px);  
+}  
+
+.menu-toggle.open .bar2 {  
+    opacity: 0;  
+}  
+
+.menu-toggle.open .bar3 {  
+    transform: rotate(45deg) translate(-8px, -8px);  
+}  
+
+/* Estilos para el menú lateral */  
+.side-menu {  
+    height: 100%;  
+    width: 0;  
+    position: fixed;  
+    top: 0;  
+    right: 0;  
+    background-color: #0f0f0f;  
+    overflow-x: hidden;  
+    transition: .5s;  
+    padding-top: 60px;  
+    box-shadow: 0 2px 8px #0000001a;  
+    z-index: 1000;  
+}  
+
+.side-menu a {  
+    padding: 10px 15px;  
+    text-decoration: none;  
+    font-size: 25px;  
+    color: #fff;  
+    display: block;  
+    transition: .3s;  
+}  
+
+.side-menu a:hover {  
+    background-color: #1f1f1f;  
+}  
+
+.side-menu.open {  
+    width: 250px;  
+}  
+
+/* Información del nivel */  
+.level-info {  
+    position: fixed;  
+    top: 65px;  
+    right: 420px;  
+    width: 340px;  
+    height: 30px;  
+    background-color: #000;  
+    color: #fff;  
+    display: flex;  
+    padding: 5px;  
+    justify-content: center;  
+    align-items: center;  
+    font-size: 15px;  
+    opacity: 0;  
+    border-radius: 5px;  
+    transition: opacity .3s ease-in-out;  
+}  
+
+.level-info.show {  
+    opacity: 85%;  
+}  
+
+/* Estilos para el logo */  
+.logo {  
+    width: 140px;  
+    margin: 18% 18% 18% 10px;  
+}
+
+body.nivel-2 #circle-1 {  
+    width: 25px;  
+    height: 25px;  
+    margin: 0 2px;  
+    transform: rotate(45deg);  
+}  
+
+/* Contenedor principal */  
+.container {  
+    display: flex;  
+}  
+
+/* Estilos para el texto y la imagen */  
+.text {  
+    width: 60%;  
+    padding: 20px;  
+    margin-right: 50px; 
+    margin-left: 15px;
+    font-size: 18px; 
+}  
+
+.image {  
+    width: 40%;  
+    padding-top: 60px;  
+    margin-left: 30px;  
+}  
+
+.image p {  
+    margin-top: 2px;  
+    margin-left: 8px;
+   
+}  
+
+.image img {  
+    width: 75%;  
+    height: 80%;  
+    border: 2px solid black;  
+    border-radius: 10px; 
+
+}  
+
+/* Contenedor de la línea de tiempo */  
+.timeline-container {  
+    max-width: 1200px;  
+    margin: 0 auto;  
+    background: #fff;  
+    padding: 20px;  
+}  
+
+/* Títulos de la línea de tiempo */  
+.timeline-container h1 {  
+    font-size: 40px;  
+    text-align: center;  
+    margin-bottom: 20px;  
+}  
+
+/* Estilos para la línea de tiempo */  
+.timeline {  
+    display: flex;  
+    justify-content: space-between;  
+    overflow-x: auto;  
+    padding: 10px 0;  
+}  
+
+.timeline-event {  
+    flex: 0 0 300px;  
+    position: relative;  
+    margin: 0 10px;  
+    padding: 10px;  
+    background: #fff;  
+    border: 2px solid black;  
+    border-radius: 8px;  
+    box-shadow: 0 0 5px #0000001a;  
+}  
+
+/* Estilos para las fechas de la línea de tiempo */  
+.timeline-date {  
+    font-size: 14px;  
+    font-weight: 700;  
+    margin-bottom: 10px;  
+    color: #333;  
+}  
+
+/* Contenido de la línea de tiempo */  
+.timeline-content h2 {  
+    font-size: 20px;  
+    margin: 0 0 10px;  
+    color: rgb(184, 15, 29);  
+}  
+
+
+.timeline-content p {  
+    font-size: 14px;  
+    margin: 0;  
+    color: black;  
+}  
+
+.players h1{
+    text-align: center;
+    font-size: 40px;
+
+}
+
+
+/* Estilos para el contenedor de arte */  
+.art-container h2 {  
+    font-size: 50px;  
+    margin-bottom: 6px;  
+    text-align: center;  
+    justify-content: center;  
+}  
+
+.art-container p {  
+    font-size: 17px;  
+    text-align: center;  
+    justify-content: center;  
+}  
+
+/* Estilos para títulos */  
+.title {  
+    font-size: 36px;  
+    font-weight: 600;  
+    color: rgb(184, 15, 29);  
+}  
+
+/* Estilos para listas */  
+.list {  
+    display: flex;  
+    padding-bottom: 30px;  
+}   
+
+/* Estilo general para el botón */  
+button.svelte-zonnq2 {  
+    position: fixed;         /* Posición fija en la pantalla */  
+    display: flex;          /* Usar flexbox para el contenido */  
+    left: 95%;              /* Posición horizontal al 95% desde la izquierda */  
+    bottom: 20px;           /* Posición vertical a 20px del fondo */  
+    cursor: pointer;        /* Cambiar cursor a puntero */  
+    border: 0;              /* Sin borde */  
+    padding: 0;             /* Sin relleno */  
+}  
+
+/* Estilo específico para el botón "next" */  
+button.next.svelte-zonnq2 {  
+    width: 48px;            /* Ancho del botón */  
+    height: 48px;           /* Alto del botón */  
+    border-radius: 50%;     /* Bordes redondeados para forma circular */  
+    background: #282936;    /* Fondo oscuro */  
+    display: flex;          /* Usar flexbox para alinear el contenido */  
+    align-items: center;    /* Alinear los elementos al centro verticalmente */  
+    justify-content: center; /* Alinear los elementos al centro horizontalmente */  
+}  
+
+/* Estilo para la flecha dentro del botón */  
+button.next.svelte-zonnq2 .arrow:where(.svelte-zonnq2) {  
+    position: relative;      /* Posición relativa para la flecha */  
+    width: 18px;            /* Ancho de la flecha */  
+    height: 2px;            /* Alto de la flecha */  
+    background: none;       /* Sin fondo */  
+    transition: transform .3s ease; /* Transición suave para el movimiento */  
+}  
+
+/* Estilo para la parte superior de la flecha */  
+button.next.svelte-zonnq2 .arrow:where(.svelte-zonnq2):before {  
+    content: "";                                       /* Contenido vacío */  
+    position: absolute;                                /* Posición absoluta */  
+    top: -5px;                                        /* Ajustar verticalmente */  
+    right: 4px;                                       /* Ajustar horizontalmente */  
+    width: 10px;                                      /* Ancho de la punta de la flecha */  
+    height: 10px;                                     /* Alto de la punta de la flecha */  
+    border-top: 2px solid #fff;                       /* Borde superior de la flecha */  
+    border-right: 2px solid #fff;                     /* Borde derecho de la flecha */  
+    transform: rotate(45deg);                          /* Rotar para formar flecha */  
+}  
+
+/* Efecto hover sobre la flecha */  
+button.next.svelte-zonnq2:hover .arrow:where(.svelte-zonnq2) {  
+    transform: translate(3px);                         /* Mover la flecha 3px a la derecha al pasar el mouse */  
+}
+.art-container {  
+    display: flex;  
+    flex-direction: column;  
+    justify-content: center;  
+    align-items: center;  
+    background: whitesmoke;  
+}  
+
+.jugadores {  
+    display: flex;  
+}  
+
+.card {  
+    height: 500px;  
+    margin: 50px;  
+    box-shadow: 5px 5px 20px black;  
+    overflow: hidden;  
+    border-radius: 6px;  
+    position: relative; /* Asegúrate de que los elementos hijos se posicionen con respecto al .card */  
+}  
+
+img {  
+    height: 500px;  
+    width: 350px;  
+    border-radius: 3px;  
+    transition: transform 0.5s; /* Agrega transición al transformar la imagen */  
+}  
+
+.intro {  
+    height: 70px;  
+    width: 350px;  
+    padding: 6px;  
+    box-sizing: border-box;  
+    position: absolute;  
+    bottom: 0px; /* Cambia esto para que esté justo encima del h1 */  
+    background: rgba(0, 0, 0, 0.7); /* Corrige el color con opacidad */  
+    color: yellow;  
+    transition: top 0.5s; /* Transición prolongada al mostrar el intro */  
+}  
+
+.intro h1 {  
+    margin: 0; /* Elimina el margen para ajustar el espacio */  
+    font-size: 20px;  
+    position: absolute; /* Permite que se posicione en la parte inferior de la intro */  
+    bottom: 20px; /* Se coloca en la parte inferior del intro */  
+    width: 100%; /* Para que ocupe todo el ancho de la tarjeta */  
+    text-align: center; /* Centra el texto */  
+    transition: bottom 0.5s; /* Transición para el movimiento hacia arriba */  
+}  
+
+.intro p {  
+    font-size: 20px;  
+    margin: 0; /* Elimina el margen para evitar interferencias */  
+    visibility: hidden;  
+    opacity: 0;  
+    transition: visibility 0s 0.5s, opacity 0.5s linear; /* Asegúrate de tener una transición de opacidad */  
+    text-align: center; /* Centra el texto */  
+}  
+
+.card:hover {  
+    cursor: pointer;  
+}  
+
+.card:hover .intro {  
+    bottom: 100px; /* Se coloca en la parte inferior de la tarjeta */  
+    background: rgba(0, 0, 0, 0.7); /* Asegúrate de que el fondo tenga una opacidad adecuada */  
+}  
+
+.card:hover .intro h1 {  
+    bottom: 70px; /* Desplaza el h1 hacia arriba al hacer hover */  
+}  
+
+.card:hover .intro p {  
+    visibility: visible;  
+    opacity: 1;  
+    transition: opacity 0.5s linear; /* Controla la transición de opacidad */  
+}  
+
+.card:hover img {  
+    transform: scale(1.1) rotate(-3deg);  
+}

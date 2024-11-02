@@ -1,0 +1,295 @@
+/* Importar fuente Poppins */  
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800&display=swap");  
+
+/* Estilos generales */  
+* {  
+    margin: 0;  
+    font-family: Poppins, sans-serif;  
+}  
+.logo {
+    width: 60px; 
+    height: 60px; 
+}  
+nav {  
+    width: 100%;  
+    height: 40px;  
+    position: fixed;  
+    background-color: rgb(184, 15, 29);  
+    color: #fff;  
+    padding: 10px;  
+    display: flex;  
+    align-items: center;  
+    z-index: 9999;  
+}  
+
+/* Estilos del encabezado */  
+header {  
+    padding-bottom: 60px;  
+}  
+
+.lesson {  
+    padding: 70px 70px;  
+}  
+
+/* Barra de progreso */  
+.progress-bar {  
+    display: flex;  
+    align-items: center;  
+    background-color: #fffe;  
+    border: 1px solid rgb(109, 109, 109);  
+    border-radius: 5px;  
+    padding: 8px;  
+}  
+
+/* Estilos de figuras en la barra de progreso */  
+.circle, .square, .rombo {  
+    width: 13px;  
+    height: 13px;  
+    margin: 0 2px;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    background-color: #00d600;  
+    border: 1px solid rgba(0, 0, 0, .404);  
+}  
+
+.circle {  
+    border-radius: 50%;  
+}  
+
+.rombo {  
+    transform: rotate(45deg);  
+    border-radius: 10%;  
+}  
+
+/* Estilos para los números dentro de las figuras */  
+.numero, .numero-2 {  
+    position: relative;  
+    color: #fff;  
+    font-size: 15px;  
+    font-weight: 500;  
+}  
+
+.numero {  
+    transform: rotate(-45deg);  
+}  
+
+/* Efectos en la barra de progreso */  
+.progress-bar > * {  
+    cursor: pointer;  
+}  
+
+.progress-bar > *:hover {  
+    background-color: #7b7b7b;  
+}  
+
+/* Estilos del botón de menú */  
+.menu-toggle {  
+    cursor: pointer;  
+    width: 30px;  
+    height: 30px;  
+    position: absolute;  
+    right: 70px;  
+    z-index: 9999;  
+    display: flex;  
+    flex-direction: column;  
+    justify-content: space-between;  
+}  
+
+.menu-toggle div {  
+    width: 35px;  
+    height: 5px;  
+    border-radius: 5px;  
+    background-color: #fff;  
+    transition: .4s;  
+}  
+
+/* Animaciones para el menú */  
+.menu-toggle.open .bar1 {  
+    transform: rotate(-45deg) translate(-9px, 9px);  
+}  
+
+.menu-toggle.open .bar2 {  
+    opacity: 0;  
+}  
+
+.menu-toggle.open .bar3 {  
+    transform: rotate(45deg) translate(-8px, -8px);  
+}  
+
+/* Estilos del menú lateral */  
+.side-menu {  
+    height: 100%;  
+    width: 0;  
+    position: fixed;  
+    top: 0;  
+    right: 0;  
+    background-color: #0f0f0f;  
+    overflow-x: hidden;  
+    transition: .5s;  
+    padding-top: 60px;  
+    box-shadow: 0 2px 8px #0000001a;  
+    z-index: 1000;  
+}  
+
+.side-menu a {  
+    padding: 10px 15px;  
+    text-decoration: none;  
+    font-size: 25px;  
+    color: #fff;  
+    display: block;  
+    transition: .3s;  
+}  
+
+.side-menu a:hover {  
+    background-color: #1f1f1f;  
+}  
+
+.side-menu.open {  
+    width: 250px;  
+}  
+
+/* Estilos de información del nivel */  
+.level-info {  
+    position: fixed;  
+    top: 65px;  
+    z-index: 9999;  
+    right: 420px;  
+    width: 340px;  
+    height: 30px;  
+    background-color: #000;  
+    color: #fff;  
+    display: flex;  
+    padding: 5px;  
+    justify-content: center;  
+    align-items: center;  
+    font-size: 15px;  
+    opacity: 0;  
+    border-radius: 5px;  
+    transition: opacity .3s ease-in-out;  
+}  
+
+.level-info.show {  
+    opacity: 85%;  
+}  
+
+/* Estilo del logo */  
+.logo {  
+    width: 140px;  
+    margin: 18% 18% 18% 10px;  
+}
+/* Estilos para el círculo en nivel 5 */  
+body.nivel-5 #circle-2 {  
+    width: 25px;  
+    height: 25px;  
+    margin: 0 2px;  
+    transform: rotate(45deg);  
+}  
+
+/* Contenedor del slider */  
+.slider-container {  
+    position: relative;  
+    width: 100%;  
+    height: 90vh;  
+    overflow: hidden;  
+}  
+
+/* Estilos de las imágenes del slider */  
+.slide-img {  
+    position: absolute;  
+    width: 100%;  
+    height: 100%;  
+    transition: transform 2s cubic-bezier(.4, 0, .2, 1);  
+    transform: scale(1);  
+}  
+
+/* Imagen activa del slider */  
+.slide.active .slide-img {  
+    transform: scale(1.1);  
+}  
+
+/* Superposición de texto en el slider */  
+.text-overlay {  
+    position: absolute;  
+    width: 100%;  
+    bottom: 0;  
+    height: 15%;  
+    background-color: #fff;  
+    text-align: initial;  
+    padding: 10px;  
+}  
+
+/* Estilos para el texto en la superposición */  
+.text-overlay p {  
+    padding-right: 80px;  
+}  
+
+/* Botones de navegación en el slider */  
+.buttons {  
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;  
+}  
+
+#prevBtn {  
+    left: 20px;  
+}  
+
+#nextBtn {  
+    right: 20px;  
+}
+
+/* Estilos para el botón principal */  
+button.svelte-zonnq2 {  
+    position: fixed;             /* Posicionamiento fijo en la ventana */  
+    display: flex;              /* Usar flexbox para centrar contenido */  
+    left: 95%;                  /* Alineación a la derecha */  
+    bottom: 20px;               /* Espaciado desde la parte inferior */  
+    cursor: pointer;            /* Cambiar el cursor al pasar sobre el botón */  
+    border: 0;                  /* Sin borde */  
+    padding: 0;                 /* Sin relleno */  
+}  
+
+/* Estilos para el botón "next" */  
+button.next.svelte-zonnq2 {  
+    width: 48px;                /* Ancho del botón */  
+    height: 48px;               /* Alto del botón */  
+    border-radius: 50%;         /* Botón redondeado */  
+    background: #282936;        /* Color de fondo */  
+    display: flex;              /* Usar flexbox para centrar contenido */  
+    align-items: center;        /* Centrar verticalmente */  
+    justify-content: center;    /* Centrar horizontalmente */  
+}  
+
+/* Estilos para la flecha dentro del botón */  
+button.next.svelte-zonnq2 .arrow:where(.svelte-zonnq2) {  
+    position: relative;         /* Posicionamiento relativo para permitir posicionamiento absoluto de pseudo-elementos */  
+    width: 18px;                /* Ancho de la flecha */  
+    height: 2px;                /* Alto de la flecha */  
+    background: none;           /* Sin fondo */  
+    transition: transform .3s ease; /* Transición suave para el movimiento */  
+}  
+
+/* Estilos para la parte superior de la flecha */  
+button.next.svelte-zonnq2 .arrow:where(.svelte-zonnq2):before {  
+    content: "";                /* Sin contenido visible */  
+    position: absolute;         /* Posicionamiento absoluto respecto a .arrow */  
+    top: -5px;                  /* Posicionamiento superior */  
+    right: 4px;                 /* Posicionamiento desde la derecha */  
+    width: 10px;                /* Ancho de la parte superior */  
+    height: 10px;               /* Alto de la parte superior */  
+    border-top: 2px solid #fff;  /* Borde superior de color blanco */  
+    border-right: 2px solid #fff; /* Borde derecho de color blanco */  
+    transform: rotate(45deg);   /* Rotación para dar forma de flecha */  
+}  
+
+/* Estilos para el hover en el botón "next" */  
+button.next.svelte-zonnq2:hover .arrow:where(.svelte-zonnq2) {  
+    transform: translate(3px);  /* Desplazamiento a la derecha al pasar el mouse */  
+}
