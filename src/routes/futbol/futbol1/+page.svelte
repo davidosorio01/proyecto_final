@@ -6,12 +6,6 @@
     import pele from '$lib/IMAGES/images_futbol/Pelé.jpg'
     import cr7 from '$lib/IMAGES/images_futbol/Cr7.webp'
 	import BotonVolver from '$lib/componentes/BotonVolver.svelte';
-
-    // Definimos `menuOpen` y `toggleMenu` para el menú desplegable
-    let menuOpen = false;
-    function toggleMenu() {
-        menuOpen = !menuOpen;
-    }
 </script>
 
 <header>

@@ -124,7 +124,7 @@ body{
     display: flex;
     align-items: center;
     transform: translateX(100%);
-    background-image: url('../IMAGES/cancha.png');
+    background-image: url('../IMAGES/images_login/Trofeos1.webp');
     transition: transform 0.5s ease-in-out, border-radius 0.5s ease-in-out;
     overflow: hidden;
     border-radius: 50% 0 0 50%;
@@ -132,7 +132,7 @@ body{
 .container.toggle .container-welcome{
     transform: translateX(0);
     border-radius: 0 50% 50% 0;
-    background-image: url('../IMAGES/basquet.jpg');
+    background-image: url('../IMAGES/images_login/Deportes1.jpg');
 }
 .container-welcome .welcome{
     position: absolute;
