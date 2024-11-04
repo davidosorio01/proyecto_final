@@ -1,5 +1,5 @@
 <script>
-    import '$lib/CSS/olvidar_contraseña.css'
+    import '$lib/CSS/olvidar_contraseña.css';
 </script>
 <section>
     <div class="color"></div>

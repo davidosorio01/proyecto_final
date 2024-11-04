@@ -24,7 +24,6 @@
 	import gf from '$lib/IMAGES/images_empezar/Golf.webp';
 	import ho from '$lib/IMAGES/images_empezar/Hockey.png';
 	import la from '$lib/IMAGES/images_empezar/Lacrosse.png';
-	import lo from '$lib/IMAGES/images_empezar/LogoPag.jpg';
 	import mo from '$lib/IMAGES/images_empezar/MotoGp.png';
 	import na from '$lib/IMAGES/images_empezar/Natación.webp';
 	import pa from '$lib/IMAGES/images_empezar/PatinajeArtistico.png';

@@ -3,13 +3,13 @@
     import BotonVolver from '$lib/componentes/BotonVolver.svelte';
     import '$lib/CSS/futbol_card/futbol2.css';
     import LogoPagina from '$lib/IMAGES/LogoPag.jpg';
-    import carrera2 from '$lib/IMAGES/images_motociclismo/Carrrera2Gp.png'
-    import campeonIn from '$lib/IMAGES/images_motociclismo/CampeonindividualGP.png'
-    import motogp from '$lib/IMAGES/images_motociclismo/MotoGPconstructores.png'
-    import carrera1 from '$lib/IMAGES/images_motociclismo/Carrera1.png'
-    import podio from '$lib/IMAGES/images_motociclismo/PodioGP.png'
-    import motogprace from '$lib/IMAGES/images_motociclismo/MotoGPrace.png'
-    import gpjapon from '$lib/IMAGES/images_motociclismo/GPjapon.png'
+    import carrera2 from '$lib/IMAGES/images_motociclismo/Carrrera2Gp.png';
+    import campeonIn from '$lib/IMAGES/images_motociclismo/CampeonindividualGP.png';
+    import motogp from '$lib/IMAGES/images_motociclismo/MotoGPconstructores.png';
+    import carrera1 from '$lib/IMAGES/images_motociclismo/Carrera1.png';
+    import podio from '$lib/IMAGES/images_motociclismo/PodioGP.png';
+    import motogprace from '$lib/IMAGES/images_motociclismo/MotoGPrace.png';
+    import gpjapon from '$lib/IMAGES/images_motociclismo/GPjapon.png';
 
     let currentSlide = 0;
 

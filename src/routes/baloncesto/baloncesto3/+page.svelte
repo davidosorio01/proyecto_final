@@ -1,10 +1,10 @@
 <script>
     import BotonVolver from '$lib/componentes/BotonVolver.svelte';
-	import '$lib/CSS/futbol_card/futbol3.css'
+	import '$lib/CSS/futbol_card/futbol3.css';
     import LogoPagina  from '$lib/IMAGES/LogoPag.jpg';
-	import balon_basquet from '$lib/IMAGES/images_baloncesto/BalonBasquet.png'
-	import cuestion_nba from '$lib/IMAGES/images_baloncesto/CuestionNBA.png'
-	import vs_basquet from '$lib/IMAGES/images_baloncesto/Basquet1VS1.png'
+	import balon_basquet from '$lib/IMAGES/images_baloncesto/BalonBasquet.png';
+	import cuestion_nba from '$lib/IMAGES/images_baloncesto/CuestionNBA.png';
+	import vs_basquet from '$lib/IMAGES/images_baloncesto/Basquet1VS1.png';
 </script>
 
 <div>

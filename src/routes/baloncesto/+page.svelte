@@ -1,6 +1,6 @@
 <script>
     import BotonVolver from '$lib/componentes/BotonVolver.svelte';
-    import '$lib/CSS/futbol_card/futbol.css'
+    import '$lib/CSS/futbol_card/futbol.css';
     import LogoPagina  from '$lib/IMAGES/LogoPag.jpg';
 </script>
 

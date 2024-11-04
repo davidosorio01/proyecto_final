@@ -1,6 +1,6 @@
 <script>
 	import BotonVolver from '$lib/componentes/BotonVolver.svelte';
-import '$lib/CSS/futbol_card/futbol3.css';
+	import '$lib/CSS/futbol_card/futbol3.css';
 	import vs from '$lib/IMAGES/images_futbol/1 vs 1.webp';
 	import camisa from '$lib/IMAGES/images_futbol/Camisa.png';
 	import pregunta from '$lib/IMAGES/images_futbol/Pregunta.webp';
@@ -25,7 +25,7 @@ import '$lib/CSS/futbol_card/futbol3.css';
 						<div class="circle" id="circle-2"><span class="numero">4</span></div>
 					</div>
 				</div>
-				<BotonVolver/>
+				<BotonVolver />
 			</nav>
 		</div>
 		<div class="level-info" id="level-info"></div>
@@ -108,11 +108,7 @@ import '$lib/CSS/futbol_card/futbol3.css';
 		</div>
 	</div>
 
-	<a
-		href="/empezar"
-		data-sveltekit-reload=""
-		data-sveltekit-preload-data="tap"
-	>
+	<a href="/empezar" data-sveltekit-reload="" data-sveltekit-preload-data="tap">
 		<button class="next svelte-zonnq2">
 			<span class="arrow svelte-zonnq2"></span>
 		</button>

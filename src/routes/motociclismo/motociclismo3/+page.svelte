@@ -3,8 +3,8 @@
 	import '$lib/CSS/futbol_card/futbol3.css';
 	import LogoPagina from '$lib/IMAGES/LogoPag.jpg';
 	import simulador1 from '$lib/IMAGES/images_motociclismo/Simulador1.png';
-    import simulador2 from '$lib/IMAGES/images_motociclismo/Simulador2.png'
-    import preguntas from '$lib/IMAGES/images_motociclismo/Preguntasmoto.png'
+    import simulador2 from '$lib/IMAGES/images_motociclismo/Simulador2.png';
+    import preguntas from '$lib/IMAGES/images_motociclismo/Preguntasmoto.png';
 </script>
 
 <div>

@@ -1,7 +1,7 @@
-import { db } from "$lib/server/database/connect"
-import { player }  from "$lib/server/database/data"
-import type { RequestEvent } from '@sveltejs/kit'
-import { eq, getOrderByOperators } from 'drizzle-orm';
+import { db } from "$lib/server/database/connect";
+import { player }  from "$lib/server/database/data";
+import type { RequestEvent } from '@sveltejs/kit';
+import { eq } from 'drizzle-orm';
 
 
 export async function load(){

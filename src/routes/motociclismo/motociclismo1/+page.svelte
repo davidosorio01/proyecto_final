@@ -3,9 +3,9 @@
 	import '$lib/CSS/futbol_card/futbol1.css';
 	import LogoPagina from '$lib/IMAGES/LogoPag.jpg';
 	import trofeos from '$lib/IMAGES/images_motociclismo/TrofeosMOTOGP.png';
-	import MarcMarquez from '$lib/IMAGES/images_motociclismo/MarcMarquez.jpg'
-	import ValentinoRossi from '$lib/IMAGES/images_motociclismo/ValentinoRossi.webp'
-	import GiacomoAgostini from '$lib/IMAGES/images_motociclismo/GiacomoAgostini.jpg'
+	import MarcMarquez from '$lib/IMAGES/images_motociclismo/MarcMarquez.jpg';
+	import ValentinoRossi from '$lib/IMAGES/images_motociclismo/ValentinoRossi.webp';
+	import GiacomoAgostini from '$lib/IMAGES/images_motociclismo/GiacomoAgostini.jpg';
 </script>
 
 <header>

@@ -2,9 +2,9 @@
     import '$lib/CSS/futbol_card/futbol1.css';
     import trofeos from '$lib/IMAGES/images_futbol/Trofeos.png';
     import LogoPagina from '$lib/IMAGES/LogoPag.jpg';
-    import messi from '$lib/IMAGES/images_futbol/Mess.jpeg'
-    import pele from '$lib/IMAGES/images_futbol/Pelé.jpg'
-    import cr7 from '$lib/IMAGES/images_futbol/Cr7.webp'
+    import messi from '$lib/IMAGES/images_futbol/Mess.jpeg';
+    import pele from '$lib/IMAGES/images_futbol/Pelé.jpg';
+    import cr7 from '$lib/IMAGES/images_futbol/Cr7.webp';
 	import BotonVolver from '$lib/componentes/BotonVolver.svelte';
 </script>
 

@@ -1,11 +1,11 @@
 <script>
     import BotonVolver from '$lib/componentes/BotonVolver.svelte';
-    import '$lib/CSS/futbol_card/futbol1.css'
+    import '$lib/CSS/futbol_card/futbol1.css';
 	import LogoPagina from '$lib/IMAGES/LogoPag.jpg';
-    import trofeos from '$lib/IMAGES/images_f1/Trofeos F1.png'
-    import schumacher from '$lib/IMAGES/images_f1/Schumacher.jpg'
-    import hamilton from '$lib/IMAGES/images_f1/hamilton.avif'
-    import senna from '$lib/IMAGES/images_f1/Senna.avif'
+    import trofeos from '$lib/IMAGES/images_f1/Trofeos F1.png';
+    import schumacher from '$lib/IMAGES/images_f1/Schumacher.jpg';
+    import hamilton from '$lib/IMAGES/images_f1/hamilton.avif';
+    import senna from '$lib/IMAGES/images_f1/Senna.avif';
 </script>
 
 <header>  

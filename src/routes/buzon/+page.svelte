@@ -1,5 +1,5 @@
 <script lang="ts">  
-  import '$lib/CSS/buzon.css'
+  import '$lib/CSS/buzon.css';
   let nombre = '';  
   let email = '';  
   let mensaje = '';  

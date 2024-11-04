@@ -1,5 +1,5 @@
 <script>
-    import '$lib/CSS/futbol_card/futbol3.css'
+    import '$lib/CSS/futbol_card/futbol3.css';
 	import LogoPagina from '$lib/IMAGES/LogoPag.jpg';
 	import Monaco from '$lib/IMAGES/images_f1/Monaco.png';
 	import QuestionF1 from '$lib/IMAGES/images_f1/QuestionF1.png';

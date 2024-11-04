@@ -1,7 +1,7 @@
 <script>  
 	let { data } = $props();  
 	let { jugadores } = data;
-    import "$lib/CSS/prueba.css"
+    import "$lib/CSS/prueba.css";
 	import LogoPagina from "$lib/IMAGES/LogoPag.jpg";
 </script>  
 
