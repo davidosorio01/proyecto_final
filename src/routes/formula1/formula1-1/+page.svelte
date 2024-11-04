@@ -2,6 +2,10 @@
     import BotonVolver from '$lib/componentes/BotonVolver.svelte';
     import '$lib/CSS/futbol_card/futbol1.css'
 	import LogoPagina from '$lib/IMAGES/LogoPag.jpg';
+    import trofeos from '$lib/IMAGES/images_f1/Trofeos F1.png'
+    import schumacher from '$lib/IMAGES/images_f1/Schumacher.jpg'
+    import hamilton from '$lib/IMAGES/images_f1/hamilton.avif'
+    import senna from '$lib/IMAGES/images_f1/Senna.avif'
 </script>
 
 <header>  
@@ -37,7 +41,7 @@
         </p>  
     </div>  
     <div class="image">  
-        <img src="../Cards img/Trofeos F1.png" alt="" />  
+        <img src={trofeos} alt="" />  
         <p>Trofeos y galardones más icónicos en la F1</p>  
     </div>  
 </div>
@@ -96,7 +100,7 @@
         <div class="jugadores">
             <div class="card">
                 <div class="player">
-                    <img src="../Cards img/Schumacher.jpg" alt="Schumacher">
+                    <img src={schumacher} alt="Schumacher">
                 </div>
                 <div class="intro">
                     <h1>¿Quién es Schumacher?</h1>
@@ -107,7 +111,7 @@
             </div>
             <div class="card">
                 <div class="player">
-                    <img src="../Cards img/hamilton.avif" alt="Hamilton">
+                    <img src={hamilton} alt="Hamilton">
                 </div>
                 <div class="intro">
                     <h1>¿Quién es Hamilton?</h1>
@@ -118,7 +122,7 @@
             </div>
             <div class="card">
                 <div class="player">
-                    <img src="../Cards img/Senna.avif" alt="Senna">
+                    <img src={senna} alt="Senna">
                 </div>
                 <div class="intro">
                     <h1>¿Quién fue Senna?</h1>
