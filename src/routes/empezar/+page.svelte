@@ -51,8 +51,8 @@
 		{ name: 'Patinaje artístico', logo: pa, href: '/empezar' },
 		{ name: 'Gimnasia', logo: gm, href: '/empezar' },
 		{ name: 'Futbol Americano', logo: fa, href: '/empezar' },
-		{ name: 'Skate', logo: sk, href: '/empezar' },
-		{ name: 'Balonmano', logo: bm, href: '/empezar' },
+		{ name: 'Skate', logo: sk, href: '/stake' },
+		{ name: 'Balonmano', logo: bm, href: '/balonmano' },
 		{ name: 'MotoGP', logo: mo, href: '/motociclismo' },
 		{ name: 'Ultimate Frisbee', logo: fr, href: '/empezar' },
 		{ name: 'Ajedrez', logo: aj, href: '/empezar' }

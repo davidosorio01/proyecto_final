@@ -14,9 +14,9 @@
          <div class="container">
              <div class="form">
                  <h2>Recuperar contraseña</h2>
-                 <form >
+                 <form action="?/recuperar">
                      <div class="inputBox">
-                         <input type="text" placeholder="Correo electronico" required>
+                         <input name="email" type="text" placeholder="Correo electronico" required>
                      </div>
                      <div class="inputBox">
                          <input type="submit" value="Enviar" />
