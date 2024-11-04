@@ -38,8 +38,10 @@
 	"type": "module",
 	"dependencies": {
 		"@libsql/client": "^0.14.0",
+		"@mapbox/node-pre-gyp": "^1.0.11",
 		"@neon-rs/load": "^0.1.81",
 		"@sveltejs/adapter-vercel": "^5.4.6",
+		"aws-sdk": "^2.1691.0",
 		"bcrypt": "^5.1.1",
 		"bufferutil": "^4.0.8",
 		"dotenv": "^16.4.5",
