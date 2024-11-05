@@ -16,7 +16,6 @@
 		"introspect": "drizzle-kit introspect"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^4.0.0-next.6",
 		"@types/bcrypt": "^5.0.2",
@@ -47,14 +46,11 @@
 		"dotenv": "^16.4.5",
 		"drizzle-orm": "^0.33.0",
 		"encoding": "^0.1.13",
-		"jquery": "^3.7.1",
 		"libsql": "^0.4.6",
 		"mock-aws-s3": "^4.0.2",
 		"nock": "^13.5.5",
 		"node-gyp": "^10.2.0",
 		"nodemailer": "^6.9.16",
-		"owl.carousel": "^2.3.4",
-		"sweetalert2": "^11.14.4",
-		"utf-8-validate": "^6.0.4"
+		"sweetalert2": "^11.14.4"
 	}
 }
